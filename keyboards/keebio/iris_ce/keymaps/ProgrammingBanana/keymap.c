@@ -3,6 +3,18 @@
 
 #include QMK_KEYBOARD_H
 
+#define HOME_A LALT_T(KC_A)
+#define HOME_R LCTL_T(KC_R)
+#define HOME_S LSFT_T(KC_S)
+#define HOME_T LGUI_T(KC_T)
+
+#define HOME_N RGUI_T(KC_N)
+#define HOME_E RSFT_T(KC_E)
+#define HOME_I RCTL_T(KC_I)
+#define HOME_O RALT_T(KC_O)
+
+#define TAPPING_TERM 200
+
 enum custom_layers {
      _QWERTY,
      _LOWER,
@@ -17,9 +29,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      TL_LOWR, KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                               KC_J,    KC_L,    KC_U,    KC_Y,   KC_SCLN,  TL_UPPR,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LCTL, MT(MOD_LALT, KC_A), MT(MOD_LCTL, KC_R), MT(MOD_LSFT, KC_S), MT(MOD_LGUI, KC_T), KC_G,                               KC_M,    MT(MOD_RGUI, KC_N), MT(MOD_RSFT, KC_E), MT(MOD_RCTL, KC_I),   MT(MOD_LALT, KC_O),     KC_QUOT,
+     KC_LCTL, HOME_A,  HOME_R,  HOME_S,  HOME_T,  KC_G,                               KC_M,    HOME_N,  HOME_E,  HOME_I,  HOME_O,  KC_QUOT,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,    KC_HOME,          KC_TAB,  KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
+     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,    KC_TAB,           KC_TAB,  KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     KC_LSFT, KC_LGUI, KC_BSPC,                   KC_SPC,  KC_ENT,  KC_RSFT
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
