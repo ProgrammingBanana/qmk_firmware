@@ -13,7 +13,6 @@
 #define HOME_I RCTL_T(KC_I)
 #define HOME_O RALT_T(KC_O)
 
-#define TAPPING_TERM 500
 
 enum custom_layers {
      _QWERTY,
